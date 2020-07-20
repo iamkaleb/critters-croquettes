@@ -63,3 +63,7 @@ for animal in slither_inn.animals:
 print(f'{critter_cove.attraction_name} is where you\'ll find {critter_cove.description}, like')
 for animal in critter_cove.animals:
     print(animal)
+
+Ally.feed()
+Sybill.feed()
+Felix.feed()

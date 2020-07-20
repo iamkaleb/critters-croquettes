@@ -68,6 +68,9 @@ class Snake(Animal):
         super().__init__(name, species, food)
         self.slithering = True
 
+    def feed(self):
+        print(f'{self.name} gobbled their {self.food} whole on {date.today().strftime("%m/%d/%Y")}')
+
 class Lizard(Animal):
 
     def __init__(self, name, species, shift, food):
@@ -81,6 +84,9 @@ class Frog(Animal):
         super().__init__(name, species, food)
         self.shift = shift
         self.walking = True
+
+    def feed(self):
+        print(f'{self.name} was tossed {self.food} on {date.today().strftime("%m/%d/%Y")} that they caught out of the air with their crazy long tongue thing')
 
 class Turtle(Animal):
 
@@ -132,3 +138,6 @@ class Alligator(Animal):
         super().__init__(name, species, food)
         self.shift = shift
         self.walking = True
+
+    def feed(self):
+        print(f'{self.name} was thrown {self.food} from behind a fence for the safety of the feeder on {date.today().strftime("%m/%d/%Y")}')
