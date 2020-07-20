@@ -1,16 +1,27 @@
 from datetime import date
 
-# The petting area
+class Animal:
 
-class Llama:
-
-    def __init__(self, name, species, shift, food, chip_num):
+    def __init__(self, name, species, food):
         self.name = name
         self.species = species
-        self.shift = shift
         self.food = food
-        self.walking = True
         self.date_added = date.today()
+
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+
+    def __str__(self):
+        return f"{self.name} the {self.species}"
+
+# The petting area
+
+class Llama(Animal):
+
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food)
+        self.shift = shift
+        self.walking = True
         self.__chip_number = chip_num
 
     @property
@@ -21,234 +32,103 @@ class Llama:
     def chip_number(self, chip_num):
         pass
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Donkey:
+class Donkey(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
+        super().__init__(name, species, food)
         self.shift = shift
-        self.food = food
         self.walking = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Goat:
+class Goat(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
+        super().__init__(name, species, food)
         self.shift = shift
-        self.food = food
         self.walking = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Emu:
+class Emu(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
+        super().__init__(name, species, food)
         self.shift = shift
-        self.food = food
         self.walking = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Camel:
+class Camel(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
+        super().__init__(name, species, food)
         self.shift = shift
-        self.food = food
         self.walking = True
-        self.date_added = date.today()
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
 
 # The glass tank  
 
-class Snake:
+class Snake(Animal):
 
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
+        super().__init__(name, species, food)
         self.slithering = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Lizard:
+class Lizard(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
+        super().__init__(name, species, food)
         self.shift = shift
-        self.food = food
         self.walking = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Frog:
+class Frog(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.food = food
+        super().__init__(name, species, food)
         self.shift = shift
         self.walking = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Turtle:
+class Turtle(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.food = food
+        super().__init__(name, species, food)
         self.shift = shift
         self.walking = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Tarantula:
+class Tarantula(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.food = food
+        super().__init__(name, species, food)
         self.shift = shift
         self.walking = True
-        self.date_added = date.today()
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
 
 # The pond
 
-class Mallard:
+class Mallard(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.food = food
+        super().__init__(name, species, food)
         self.shift = shift
         self.walking = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Flamingo:
+class Flamingo(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.food = food
+        super().__init__(name, species, food)
         self.shift = shift
         self.walking = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Goldfish:
+class Goldfish(Animal):
 
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
+        super().__init__(name, species, food)
         self.food = food
         self.swimming = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Hippopotamus:
+class Hippopotamus(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.food = food
+        super().__init__(name, species, food)
         self.shift = shift
         self.walking = True
-        self.date_added = date.today()
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
-
-class Alligator:
+class Alligator(Animal):
 
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.food = food
+        super().__init__(name, species, food)
         self.shift = shift
         self.walking = True
-        self.date_added = date.today()
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} the {self.species}"
