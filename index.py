@@ -7,7 +7,7 @@ slither_inn = SnakePit('The Slither Inn', 'creepy, crawly critters to look at')
 
 critter_cove = Wetlands('Critter Cove', 'feathery and flying critters to hang with')
 
-Larry = Llama('Larry', 'Llama', 'morning', 'Llama food')
+Larry = Llama('Larry', 'Llama', 'morning', 'Llama food', 123456789)
 varmint_village.add(Larry)
 
 Derek = Donkey('Derek', 'Donkey', 'midday', 'Donkey food')

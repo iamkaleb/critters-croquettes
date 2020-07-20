@@ -6,7 +6,11 @@ class PettingZoo:
         self.animals = list()
 
     def add(self, animal):
-        self.animals.append(animal)  
+        self.animals.append(animal)
+
+    @property
+    def last_critter_added(self):
+        return f'{self.animals[-1]}'
 
 class SnakePit:
 
@@ -16,7 +20,14 @@ class SnakePit:
         self.animals = list()
 
     def add(self, animal):
-        self.animals.append(animal) 
+        self.animals.append(animal)
+
+    def add(self, animal):
+        self.animals.append(animal)
+
+    @property
+    def last_critter_added(self):
+        return f'{self.animals[-1]}'
 
 class Wetlands:
         
@@ -27,3 +38,10 @@ class Wetlands:
 
     def add(self, animal):
         self.animals.append(animal)
+
+    def add(self, animal):
+        self.animals.append(animal)
+
+    @property
+    def last_critter_added(self):
+        return f'{self.animals[-1]}'
