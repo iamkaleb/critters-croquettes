@@ -4,16 +4,25 @@ from datetime import date
 
 class Llama:
 
-    def __init__(self, name, species, shift, food):
+    def __init__(self, name, species, shift, food, chip_num):
         self.name = name
         self.species = species
         self.shift = shift
         self.food = food
         self.walking = True
         self.date_added = date.today()
+        self.__chip_number = chip_num
+
+    @property
+    def chip_number(self):
+        return self.__chip_number
+
+    @chip_number.setter
+    def chip_number(self, chip_num):
+        pass
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -29,7 +38,7 @@ class Donkey:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -61,7 +70,7 @@ class Emu:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -77,7 +86,7 @@ class Camel:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -94,7 +103,7 @@ class Snake:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -110,7 +119,7 @@ class Lizard:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -126,7 +135,7 @@ class Frog:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -142,7 +151,7 @@ class Turtle:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -158,7 +167,7 @@ class Tarantula:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -176,7 +185,7 @@ class Mallard:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -192,7 +201,7 @@ class Flamingo:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -207,7 +216,7 @@ class Goldfish:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -223,7 +232,7 @@ class Hippopotamus:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
@@ -239,7 +248,7 @@ class Alligator:
         self.date_added = date.today()
 
     def feed(self):
-      print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} the {self.species}"
