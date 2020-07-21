@@ -1,4 +1,4 @@
-from animals import Llama, Donkey, Goat, Emu, Camel, Snake, Lizard, Frog, Turtle, Tarantula, Mallard, Flamingo, Goldfish, Hippopotamus, Alligator
+from animals import Llama, Donkey, Goat, Emu, Camel, Snake, Lizard, Frog, Turtle, Tarantula, Mallard, Flamingo, Goldfish, Hippopotamus, Alligator, Goose
 from attractions import PettingZoo, SnakePit, Wetlands
 
 varmint_village = PettingZoo('Varmint Village', 'cute and fuzzy critters to cuddle')
@@ -8,49 +8,52 @@ slither_inn = SnakePit('The Slither Inn', 'creepy, crawly critters to look at')
 critter_cove = Wetlands('Critter Cove', 'feathery and flying critters to hang with')
 
 Larry = Llama('Larry', 'Llama', 'morning', 'Llama food', 123456789)
-varmint_village.add(Larry)
+varmint_village.add_animal(Larry)
 
 Derek = Donkey('Derek', 'Donkey', 'midday', 'Donkey food')
-varmint_village.add(Derek)
+varmint_village.add_animal(Derek)
 
 Gary = Goat('Gary', 'Goat', 'afternoon', 'Goat food')
-varmint_village.add(Gary)
+varmint_village.add_animal(Gary)
 
 Eli = Emu('Eli', 'Emu', 'morning', 'Emu food')
-varmint_village.add(Eli)
+varmint_village.add_animal(Eli)
 
 Carey = Camel('Carey', 'Camel', 'midday', 'Camel food')
-varmint_village.add(Carey)
+varmint_village.add_animal(Carey)
 
 Sybill = Snake('Sybill', 'Snake', 'Snake food')
-slither_inn.add(Sybill)
+slither_inn.add_animal(Sybill)
 
 Lizzy = Lizard('Lizzy', 'Lizard', 'afternoon', 'Lizard food')
-slither_inn.add(Lizzy)
+slither_inn.add_animal(Lizzy)
 
-Felix = Frog('Felix', 'Frog', 'morning', 'Frog food')
-slither_inn.add(Felix)
+Felix = Frog('Felix', 'Frog', 'Frog food')
+slither_inn.add_animal(Felix)
 
 Tommy = Turtle('Tommy', 'Turtle', 'midday', 'Turtle food')
-slither_inn.add(Tommy)
+slither_inn.add_animal(Tommy)
 
 Terry = Tarantula('Terry', 'Tarantula', 'afternoon', 'Tarantula food')
-slither_inn.add(Terry)
+slither_inn.add_animal(Terry)
 
 Mallory = Mallard('Mallory', 'Mallard', 'morning', 'Mallard food')
-critter_cove.add(Mallory)
+critter_cove.add_animal(Mallory)
 
-Ferdinand = Flamingo('Ferdinand', 'Flamingo', 'midday', 'Flamingo food')
-critter_cove.add(Ferdinand)
+Ferdinand = Flamingo('Ferdinand', 'Flamingo', 'Flamingo food')
+critter_cove.add_animal(Ferdinand)
 
 Gloria = Goldfish('Gloria', 'Goldfish', 'Goldfish food')
-critter_cove.add(Gloria)
+critter_cove.add_animal(Gloria)
 
-Harriet = Hippopotamus('Harriet', 'Hippopotamus', 'afternoon', 'Hippopotamus food')
-critter_cove.add(Harriet)
+Harriet = Hippopotamus('Harriet', 'Hippopotamus', 'Hippopotamus food')
+critter_cove.add_animal(Harriet)
 
-Ally = Alligator('Ally', 'Alligator', 'morning', 'Alligator food')
-critter_cove.add(Ally)
+Ally = Alligator('Ally', 'Alligator', 'Alligator food')
+critter_cove.add_animal(Ally)
+
+Bob = Goose("Bob", "Canada goose", "watercress sandwiches")
+varmint_village.add_animal(Bob)
 
 print(f'{varmint_village.attraction_name} is where you\'ll find {varmint_village.description}, like')
 for animal in varmint_village.animals:
